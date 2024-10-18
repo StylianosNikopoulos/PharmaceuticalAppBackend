@@ -8,6 +8,6 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'category', 'activeIngredients', 'batchNum', 'status','manufacturingDate', 'expirationDate'];
+    protected $fillable = ['name', 'category', 'active_ingredients', 'batch_number', 'status','manufacturing_date', 'expiration_date'];
 
 }

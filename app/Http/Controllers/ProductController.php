@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\StoreProductRequest;
 
 class ProductController extends Controller
 {
@@ -39,11 +41,45 @@ class ProductController extends Controller
         ],200);
     }
 
-    public function store(){
+    /**
+     * Store a newly created product in storage.
+     */
+    public function store(StoreProductRequest $request){
+
+        $product = Product::create($request->validated());
+
+        if($product === null){
+            return response()->json([
+                'message' => 'Failed to create a Product',
+            ],400);
+        }
+
+        return response()->json([
+            'message' => 'Product created successfully',
+            'product' => $product
+        ],201);
+
 
     }
 
-    public function update(){
+
+    /**
+     * Update the specified product in storage.
+     */
+    public function update(UpdateProductRequest $request, Product $product){
+
+        if($product === null){
+            return response()->json([
+                'message' => 'Product not found',
+            ],404);
+        }
+        
+        $product->update($request->validated());
+
+        return response()->json([
+            'message' => 'Product updated successfully',
+            'product' => $product
+        ],200);
 
     }
 
