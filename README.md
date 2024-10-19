@@ -53,8 +53,6 @@ Before starting, ensure you have the following tools installed:
 
 ## Installation Steps
 
-1. **Clone the repository:**
-
    ```bash
    git clone https://github.com/StylianosNikopoulos/PharmaceuticalAppBackend.git
    composer install
