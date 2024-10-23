@@ -86,19 +86,8 @@ class ProductController extends Controller
 /**
  * Remove the specified product from storage.
  */
-public function destroy(Request $request)
+public function destroy(Product $product)
 {
-    // Retrieve the 'id' from the request input
-    $productId = $request->input('id');
-
-    // Validate that 'id' is provided and is an integer
-    $request->validate([
-        'id' => 'required|integer|exists:products,id',
-    ]);
-
-    // Find the product by ID
-    $product = Product::find($productId);
-
     // Check if the product exists
     if ($product === null) {
         return response()->json([
@@ -112,7 +101,7 @@ public function destroy(Request $request)
     // Return a success response
     return response()->json([
         'message' => 'Product deleted successfully',
-    ], 200);
+    ], 204);
 }
 
 
