@@ -35,4 +35,25 @@ class ProductControllerTest extends TestCase
         $response->assertStatus(404);
         $response->assertJson(['message' => 'No products found', 'products' => []]);
     }
+
+    //Test show function if show specific products
+    public function test_should_return_specific_product(){
+        $product = Product::factory()->create();
+        $response = $this->getJson("/api/products/{$product->id}");
+        $response->assertStatus(200);
+        $response->assertJson([
+           'message' => 'Product successfully retrieved',
+            'product' => [
+                'id' => $product->id,
+                'name' => $product->name
+            ]
+        ]);
+
+    }
+
+    //Test show function if product not found
+    public function test_should_return_empty_when_product_not_found(){
+        $response = $this->getJson('/api/products/{$product->id}');
+        $response->assertStatus(404);
+    }
 }
