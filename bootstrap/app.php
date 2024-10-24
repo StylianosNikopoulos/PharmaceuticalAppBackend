@@ -21,5 +21,12 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->shouldRenderJsonWhen(function (Request $request, Throwable $exception) {
             return $request->is('api/*');
         });
+        // Define how to render NotFoundHttpException
+        $exceptions->render(function (NotFoundHttpException $exception, Request $request) {
+            // Return JSON response for NotFoundHttpException
+            return response()->json([
+                'message' => $exception->getMessage(), 
+            ], 404);
+        });
 
     })->create();
