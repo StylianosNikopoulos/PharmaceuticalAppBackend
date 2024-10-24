@@ -18,7 +18,7 @@ class ProductFactory extends Factory
     {
 
         // Generate a random manufacturing date
-        $manufacturingDate = $this->faker->dateTimeBetween('now', '+2 years'); 
+        $manufacturingDate = $this->faker->dateTimeBetween('-2 years', 'now'); 
         $productNames = [
             'Lyrica',
             'Lipitor',
