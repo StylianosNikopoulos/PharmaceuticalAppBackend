@@ -19,6 +19,11 @@ Before starting, ensure you have the following tools installed:
    cp .env.example .env
    php artisan key:generate
    php artisan migrate
+   ```
+
+
+
+
 
 **Endpoints**
 
@@ -60,6 +65,5 @@ Before starting, ensure you have the following tools installed:
     "updated_at": "2024-10-18T17:39:14.000000Z"
   }
 }
-```
 
 
