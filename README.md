@@ -9,7 +9,7 @@ Before starting, ensure you have the following tools installed:
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
-## Installation Steps
+## Installation Steps: Linux/IOS
 
    ```bash
    git clone https://github.com/StylianosNikopoulos/PharmaceuticalAppBackend.git
@@ -21,9 +21,7 @@ Before starting, ensure you have the following tools installed:
    php artisan migrate
    ```
 
-
-
-
+##
 
 **Endpoints**
 
