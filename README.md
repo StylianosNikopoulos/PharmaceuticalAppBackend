@@ -1,5 +1,24 @@
 # PharmaceuticalAppBackEnd
 
+## Requirements
+
+Before starting, ensure you have the following tools installed:
+
+- [PHP 8.x](https://www.php.net/downloads)
+- [Composer](https://getcomposer.org/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+## Installation Steps
+
+   ```bash
+   git clone https://github.com/StylianosNikopoulos/PharmaceuticalAppBackend.git
+   composer install
+   docker-compose up -d
+   ./vendor/bin/sail shell
+   cp .env.example .env
+   php artisan key:generate
+   php artisan migrate
 
 **Endpoints**
 
@@ -42,23 +61,5 @@
   }
 }
 ```
-## Requirements
 
-Before starting, ensure you have the following tools installed:
-
-- [PHP 8.x](https://www.php.net/downloads)
-- [Composer](https://getcomposer.org/)
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-
-## Installation Steps
-
-   ```bash
-   git clone https://github.com/StylianosNikopoulos/PharmaceuticalAppBackend.git
-   composer install
-   docker-compose up -d
-   ./vendor/bin/sail shell
-   cp .env.example .env
-   php artisan key:generate
-   php artisan migrate
 
