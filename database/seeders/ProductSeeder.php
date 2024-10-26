@@ -12,7 +12,7 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        //Never crate more than 12 products because there are only 12 unique names declared at the seeder
-        \App\Models\Product::factory(10)->create();
+        //Never crate more than 25 products because there are only 12 unique names declared at the seeder
+        \App\Models\Product::factory(20)->create();
     }
 }

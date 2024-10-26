@@ -20,18 +20,31 @@ class ProductFactory extends Factory
         // Generate a random manufacturing date
         $manufacturingDate = $this->faker->dateTimeBetween('-2 years', 'now'); 
         $productNames = [
-            'Lyrica',
             'Lipitor',
-            'Eliquis',
-            'Prevnar',
-            'Xeljanz',
+            'Lyrica',
+            'Zithromax',
+            'Prevnar 13',
             'Ibrance',
             'Chantix',
-            'Zithromax',
+            'Xeljanz',
+            'Sutent',
+            'Eliquis',
             'Celebrex',
+            'Zoloft',
+            'Depo-Provera',
+            'Diflucan',
             'Norvasc',
+            'Zosyn',
+            'Xtandi',
             'Enbrel',
-            'Diflucan'
+            'Genotropin',
+            'Trazimera',
+            'Bosulif',
+            'Inlyta',
+            'Xenical',
+            'Xalkori',
+            'Fragmin',
+            'Somavert'
         ];
         $productCategories = ['tablet', 'capsule', 'injection'];
         $productStatuses = ['under development', 'in clinical trials', 'completed'];
