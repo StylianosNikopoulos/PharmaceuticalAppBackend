@@ -1,4 +1,8 @@
-# PharmaceuticalAppBackEnd
+# Pharmaceutical Product Management App Backend
+
+## Related Repositories
+
+- Frontend: [PharmaceuticalAppFrontend](https://github.com/StylianosNikopoulos/PharmaceuticalAppFrontend.git)
 
 ## Requirements
 
