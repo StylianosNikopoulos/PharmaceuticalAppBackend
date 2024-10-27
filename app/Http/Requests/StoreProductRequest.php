@@ -19,7 +19,7 @@ class StoreProductRequest extends FormRequest
             'category'            => 'required|string|max:255',
             'active_ingredients'  => 'required|string',
             'batch_number'        => 'required|string|max:255|unique:products,batch_number',
-            'status'              => ['required', 'string', Rule::in(['Under Development', 'In Clinical Trials', 'Completed'])],
+            'status'              => ['required', 'string', Rule::in(['under development', 'in clinical trials', 'completed'])],
             'manufacturing_date'  => 'required|date|before_or_equal:today',
             'expiration_date'     => 'required|date|after:manufacturing_date',
         ];
