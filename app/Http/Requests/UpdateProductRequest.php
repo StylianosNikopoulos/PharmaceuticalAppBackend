@@ -21,7 +21,7 @@ class UpdateProductRequest extends FormRequest
             'category' => 'sometimes|required|string|max:255',
             'active_ingredients' => 'sometimes|required|string|max:255',
             'batch_number' => 'sometimes|required|string|max:255|unique:products,batch_number,' . $productId,
-            'status' => ['required', 'string', Rule::in(['under development', 'in clinical trials', 'completed'])],,
+            'status' => ['required', 'string', Rule::in(['under development', 'in clinical trials', 'completed'])],
             'manufacturing_date' => 'sometimes|required|date|before_or_equal:today',
             'expiration_date' => 'sometimes|required|date|after:manufacturing_date',
         ];
